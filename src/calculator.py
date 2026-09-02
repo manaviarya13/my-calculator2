@@ -54,8 +54,19 @@ def power(a, b):
     return result
 
 
+def square(a):
+    """Calculate the square of a number."""
+    if not isinstance(a, (int, float)):
+        raise TypeError("Argument must be a number")
+
+    print(f"Square of {a}")
+    result = a ** 2
+    print(f"Result: {result}")
+    return result
+
+
 def square_root(a):
-    """Calculate the square root of a with input validation."""
+    """Calculate the square root of a number with input validation."""
     if not isinstance(a, (int, float)):
         raise TypeError("Argument must be a number")
 
@@ -78,4 +89,5 @@ if __name__ == "__main__":
     print(f"4 × 3 = {multiply(4, 3)}")
     print(f"10 ÷ 2 = {divide(10, 2)}")
     print(f"2 ^ 3 = {power(2, 3)}")
+    print(f"5² = {square(5)}")
     print(f"√16 = {square_root(16)}")
